@@ -7,137 +7,457 @@
 <meta name="description" content="Profil Pabrik Gula (PG) Pesantren Baru di Kediri, Jawa Timur: sejarah, struktur organisasi, lokasi, dan produk.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@500;700&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config={theme:{extend:{colors:{ground:'var(--dp-color-ground)',muted:'var(--dp-color-ground-muted)',ink:'var(--dp-color-ink)',accent:'var(--dp-color-accent)',field:'var(--dp-color-field)'},fontFamily:{display:["'Host Grotesk'",'sans-serif'],sans:["'Instrument Sans'",'sans-serif']},borderRadius:{panel:'var(--dp-radius-panel)'}}}}
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 <a class="skip" href="#beranda">Langsung ke konten</a>
+
 <header class="hdr">
-  <div class="wrap">
-    <a class="brand" href="#beranda">PG Pesantren Baru</a>
+  <div class="hdr-inner">
+    <a class="brand" href="#beranda">
+      <div class="brand-emblem">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAMkxbDVNk4uGkwsiwxkGxDW5r7ZrGfD5YgAmjEfPwcBFhFr_WCwWhdvg&s=10" alt="Logo PG Pesantren Baru">
+      </div>
+      <span>PG Pesantren Baru</span>
+    </a>
     <button class="burger" id="burger" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav class="nav" id="nav" aria-label="Navigasi utama">
-      <a href="#beranda">Beranda</a><a href="#tentang">Tentang</a><a href="#struktur">Struktur</a><a href="#lokasi">Lokasi</a><a href="#sosial-media">Sosial Media</a><a href="#produk">Produk</a><a class="cta" href="#kontak">Kontak</a>
+      <a href="#beranda">Beranda</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#struktur">Struktur</a>
+      <a href="#lokasi">Lokasi</a>
+      <a href="#sosial-media">Sosial Media</a>
+      <a href="#produk">Produk</a>
+      <a class="cta" href="#kontak">Kontak</a>
     </nav>
   </div>
 </header>
+
 <main>
-<section id="beranda" style="padding-top:64px">
+<!-- BERANDA / HERO -->
+<section id="beranda" style="padding-top:48px">
   <div class="wrap">
     <div class="hero">
       <div>
+        <div class="clay-badge">🌿 Beroperasi di Bawah PT Sinergi Gula Nusantara (SGN)</div>
         <h1>Pabrik Gula Pesantren Baru</h1>
-        <p>Dari tebu Kediri menjadi Gula Kristal Putih berstandar SNI. Berakar sejak era Hindia Belanda, kini beroperasi di bawah PT Sinergi Gula Nusantara (SGN) bersama petani mitra.</p>
-        <div class="btns"><a class="btn btn-p" href="#kontak">Hubungi Kami</a><a class="btn btn-s" href="#produk">Lihat Produk</a></div>
+        <p>Dari tebu Kediri menjadi Gula Kristal Putih berstandar SNI. Berakar sejak era Hindia Belanda, kini bertransformasi modern bersama petani mitra untuk mewujudkan ketahanan pangan nasional.</p>
+        <div class="btns">
+          <a class="btn btn-p" href="#kontak">Hubungi Kami</a>
+          <a class="btn btn-s" href="#produk">Lihat Produk</a>
+        </div>
       </div>
-      <div class="card">
-        <div class="ph logo" role="img" aria-label="Logo PG Pesantren Baru">Nanti ada gambar logo perusahaan</div>
-        <ul class="flow" aria-label="Alur produksi">
-          <li>Tebu</li><li class="mid">PG Pesantren Baru</li><li>Gula Kristal Putih, Tetes Tebu, Ampas Tebu</li>
+
+      <div class="clay-card hero-card">
+        <div class="hero-brand-header">
+          <div class="hero-logo-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAMkxbDVNk4uGkwsiwxkGxDW5r7ZrGfD5YgAmjEfPwcBFhFr_WCwWhdvg&s=10" alt="Logo PG Pesantren Baru">
+          </div>
+          <div class="hero-brand-meta">
+            <h4>PT Sinergi Gula Nusantara</h4>
+            <p>Unit PG Pesantren Baru • Kediri</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="flow-title">Alur Produksi Terpadu</div>
+          <div class="flow-container" aria-label="Alur produksi">
+            <div class="flow-step">
+              <div class="flow-icon">🎋</div>
+              <div class="flow-text">
+                <strong>Tebu Pilihan</strong>
+                <span>Hasil panen petani mitra Kediri</span>
+              </div>
+            </div>
+            <div class="flow-step active">
+              <div class="flow-icon">🏭</div>
+              <div class="flow-text">
+                <strong>PG Pesantren Baru</strong>
+                <span>Ekstraksi, pemurnian & kristalisasi</span>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-icon">✨</div>
+              <div class="flow-text">
+                <strong>Produk Bernilai Tinggi</strong>
+                <span>Gula Kristal Putih, Tetes Tebu & Ampas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Facts -->
+    <div class="facts-grid">
+      <div class="fact-item">
+        <div class="fact-icon">📍</div>
+        <div>
+          <strong>Kediri, Jatim</strong>
+          <span>Wilayah sentra perkebunan tebu subur</span>
+        </div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-icon">🏛️</div>
+        <div>
+          <strong>Nasionalisasi 1957</strong>
+          <span>Aset strategis kedaulatan gula nasional</span>
+        </div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-icon">🤝</div>
+        <div>
+          <strong>Integrasi SGN</strong>
+          <span>Di bawah PT Sinergi Gula Nusantara</span>
+        </div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-icon">🎖️</div>
+        <div>
+          <strong>Standar SNI</strong>
+          <span>Gula Kristal Putih higienis & bermutu</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TENTANG PERUSAHAAN -->
+<section id="tentang">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="clay-badge">📖 Jejak Langkah & Dedikasi</div>
+      <h2>Tentang Perusahaan</h2>
+      <p class="lead">Mengenal sejarah panjang, proses modernisasi berkelanjutan, serta komitmen PG Pesantren Baru dalam menggerakkan perekonomian daerah.</p>
+    </div>
+
+    <div class="about-hero-grid">
+      <!-- Visual Card -->
+      <div class="clay-card pad about-visual-card">
+        <div class="factory-img-wrap">
+          <img class="factory-img" src="https://cdn.antaranews.com/cache/1200x800/2023/06/27/19_1.jpg" alt="Foto Pabrik Gula Pesantren Baru" loading="lazy">
+          <div class="factory-img-badge">🏭 Kawasan Pabrik Gula Pesantren Baru • Kediri, Jawa Timur</div>
+        </div>
+        
+        <div class="about-stats">
+          <div class="about-stat-box">
+            <span>Peran Strategis</span>
+            <strong>Swasembada Gula</strong>
+          </div>
+          <div class="about-stat-box">
+            <span>Dampak Ekonomi</span>
+            <strong>Ribuan Petani Mitra</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Structured Milestones / Narrative -->
+      <div class="history-timeline">
+        <div class="clay-card milestone-card">
+          <span class="milestone-year">Era Kolonial hingga 1957</span>
+          <h4>Akar Sejarah & Nasionalisasi</h4>
+          <p>Pabrik Gula (PG) Pesantren Baru bermula dari era pemerintahan Hindia Belanda yang didirikan untuk mengoptimalkan potensi kesuburan tanah di Kediri, Jawa Timur. Setelah kemerdekaan, pabrik ini menjadi bagian dari sejarah nasionalisasi aset pada tahun 1957 yang membuatnya beralih kepemilikan kepada pemerintah Republik Indonesia untuk memastikan pasokan gula nasional tetap terjaga.</p>
+        </div>
+
+        <div class="clay-card milestone-card">
+          <span class="milestone-year">Era Transformasi PTPN X</span>
+          <h4>Modernisasi Mesin & Kemitraan Petani</h4>
+          <p>Dalam perjalanannya, PG Pesantren Baru mengalami modernisasi yang signifikan saat bernaung di bawah PT Perkebunan Nusantara X (PTPN X). Fokus utama diarahkan pada revitalisasi mesin giling modern serta memperkuat kemitraan harmonis bersama petani tebu rakyat di kawasan Kediri dan sekitarnya.</p>
+        </div>
+
+        <div class="clay-card milestone-card">
+          <span class="milestone-year">Era Sinergi Gula Nusantara (SGN) & Kini</span>
+          <h4>Standar Mutu SNI & Ketahanan Pangan</h4>
+          <p>Kini, operasional pabrik terintegrasi secara terpadu di bawah PT Sinergi Gula Nusantara (SGN) dengan standar efisiensi yang lebih tinggi. Pabrik memproduksi Gula Kristal Putih (GKP) berstandar SNI sekaligus menjadi pilar ekonomi dan kesejahteraan bagi ribuan keluarga petani mitra di Jawa Timur.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video Card -->
+    <div class="clay-card video-theater-card">
+      <div class="video-theater-head">
+        <div>
+          <h3>🎬 Video Profil PG Pesantren Baru</h3>
+          <p class="lead" style="font-size:14.5px;margin-top:4px">Simak tayangan profil dan aktivitas operasional di lingkungan pabrik.</p>
+        </div>
+        <a class="btn btn-s" href="https://youtu.be/30mm1zZYCas?si=H_bBny28VA3ARf2b" target="_blank" rel="noopener noreferrer">
+          Buka di YouTube ↗
+        </a>
+      </div>
+      <div class="video-wrap">
+        <iframe src="https://www.youtube-nocookie.com/embed/30mm1zZYCas" title="Video perkenalan PG Pesantren Baru" loading="lazy" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRUKTUR ORGANISASI -->
+<section id="struktur">
+  <div class="wrap">
+    <div class="section-head center">
+      <div class="clay-badge">👥 Tata Kelola Manajemen</div>
+      <h2>Struktur Perusahaan</h2>
+      <p class="lead">PG Pesantren Baru dipimpin oleh seorang Administratur yang membawahi enam bagian fungsional: keamanan, quality control, keuangan dan umum, pengolahan, instalasi, serta tanaman.</p>
+    </div>
+
+    <div class="clay-card org-wrapper" role="region" tabindex="0" aria-label="Bagan struktur organisasi PG Pesantren Baru">
+      <div class="root">
+        <span class="n">Administratur</span>
+        <ul class="l2">
+          <li>
+            <span class="n">Perwira Keamanan</span>
+          </li>
+          <li>
+            <span class="n">Kepala Quality Control</span>
+            <ul class="sub">
+              <li><span class="n">Staf Litbang Tanaman</span></li>
+              <li><span class="n">Staf Litbang Pabrik dan Lingkungan</span></li>
+            </ul>
+          </li>
+          <li>
+            <span class="n">Kepala Bagian A.K.U</span>
+            <ul class="sub">
+              <li>
+                <span class="n">Assisten Bagian SDM dan Umum</span>
+                <ul class="sub">
+                  <li><span class="n">R C Personalia</span></li>
+                  <li><span class="n">R C Pengadaan bahan/barang dan jasa</span></li>
+                  <li><span class="n">R C sekretariat dan rumah tangga</span></li>
+                </ul>
+              </li>
+              <li>
+                <span class="n">Assisten Bagian Keuangan</span>
+                <ul class="sub">
+                  <li><span class="n">R C Akuntansi</span></li>
+                  <li><span class="n">T U Hasil</span></li>
+                  <li><span class="n">R C Gudang</span></li>
+                  <li><span class="n">Kepala Kantor Jengkol</span></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="n">Kepala Bagian Pengolahan</span>
+            <ul class="sub">
+              <li>
+                <span class="n">Wakil Kepala Bag. Pengolahan</span>
+                <ul class="sub">
+                  <li><span class="n">Kemiker I Pemurnian</span></li>
+                  <li><span class="n">Kemiker II Penguapan</span></li>
+                  <li><span class="n">Kemiker III Masakan</span></li>
+                  <li><span class="n">Kemiker IV Puteran</span></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="n">Kepala Bagian Instalasi</span>
+            <ul class="sub">
+              <li>
+                <span class="n">Wakil Kepala Bag. Instalasi</span>
+                <ul class="sub">
+                  <li><span class="n">Masinis Gilingan</span></li>
+                  <li><span class="n">Masinis Ketel</span></li>
+                  <li><span class="n">Masinis Listrik dan Instrumen</span></li>
+                  <li><span class="n">Masinis Besali/Garasi</span></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="n">Kepala Bagian Tanaman</span>
+            <ul class="sub">
+              <li>
+                <span class="n">SKK TS HGU</span>
+                <ul class="sub">
+                  <li><span class="n">SK I TS</span></li>
+                  <li><span class="n">SK II TS</span></li>
+                  <li><span class="n">Sinder Mekanisasi</span></li>
+                </ul>
+              </li>
+              <li>
+                <span class="n">SKK TR</span>
+                <ul class="sub">
+                  <li><span class="n">SK II TR</span></li>
+                  <li><span class="n">SK III TR</span></li>
+                </ul>
+              </li>
+              <li>
+                <span class="n">SKK TA</span>
+                <ul class="sub">
+                  <li><span class="n">Sinder Caneyard</span></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
-    <ul class="facts">
-      <li>Berdiri di Kediri, Jawa Timur</li><li>Nasionalisasi 1957</li><li>Di bawah PT Sinergi Gula Nusantara (SGN)</li><li>Produk utama GKP berstandar SNI</li>
-    </ul>
+    <p class="hint">💡 Pada layar sempit, geser bagan ke samping bila perlu.</p>
   </div>
 </section>
 
-<section id="tentang" class="muted">
+<!-- LOKASI PERUSAHAAN -->
+<section id="lokasi" style="padding-top:20px">
   <div class="wrap">
-    <h2>Tentang Perusahaan</h2>
-    <div class="card" style="margin-top:32px">
-      <div class="ph" role="img" aria-label="Foto Pabrik Gula Pesantren Baru">Nanti ada gambar Pabrik Gula Pesantren Baru</div>
-      <div class="pad prose">
-        <p>Pabrik Gula (PG) Pesantren Baru memiliki akar sejarah yang panjang dalam industri pergulaan Indonesia, bermula dari era pemerintahan Hindia Belanda saat didirikan untuk mengoptimalkan potensi kesuburan tanah di Kediri, Jawa Timur. Setelah masa kemerdekaan, pabrik ini menjadi bagian dari sejarah nasionalisasi aset pada tahun 1957 yang membuatnya beralih kepemilikan kepada pemerintah Republik Indonesia. Sejak saat itu, pengelolaannya terus bertransformasi di bawah naungan perusahaan negara untuk memastikan pasokan gula nasional tetap terjaga.</p>
-        <p>Dalam perjalanannya, PG Pesantren Baru mengalami modernisasi yang signifikan saat bernaung di bawah PT Perkebunan Nusantara X (PTPN X), dengan fokus pada revitalisasi mesin giling dan penguatan kemitraan bersama petani tebu rakyat. Saat ini, sejalan dengan visi pemerintah mewujudkan ketahanan pangan, operasional pabrik terintegrasi secara modern di bawah PT Sinergi Gula Nusantara (SGN). Transformasi ini membawa standar produksi yang lebih efisien dan inovatif dalam memproses bahan baku tebu menjadi produk berkualitas.</p>
-        <p>Kini, PG Pesantren Baru terus berfokus menghasilkan Gula Kristal Putih (GKP) bermutu tinggi yang memenuhi Standar Nasional Indonesia (SNI). Tidak sekadar menjadi fasilitas produksi yang menopang target swasembada gula nasional, pabrik ini tetap memegang komitmen kuat sebagai penggerak roda ekonomi daerah dan pilar kesejahteraan bagi ribuan petani mitra di wilayah Jawa Timur.</p>
+    <div class="section-head center">
+      <div class="clay-badge">📍 Akses & Navigasi</div>
+      <h2>Lokasi Perusahaan</h2>
+      <p class="lead">PG Pesantren Baru berada di Kediri, Jawa Timur. Temukan rute langsung menuju pabrik melalui peta interaktif berikut.</p>
+    </div>
+
+    <div class="clay-card map-card">
+      <iframe class="map-frame" title="Peta lokasi PG Pesantren Baru" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=PG+Pesantren+Baru+Kediri&output=embed"></iframe>
+      <div class="map-action-bar">
+        <div>
+          <strong>Pabrik Gula Pesantren Baru</strong>
+          <p class="lead" style="font-size:14px;margin:2px 0 0">Kec. Pesantren, Kota Kediri, Jawa Timur</p>
+        </div>
+        <a class="btn btn-p" href="https://maps.app.goo.gl/5reTrpXEPBcyXHJV9" target="_blank" rel="noopener noreferrer">Buka di Google Maps ↗</a>
       </div>
     </div>
-    <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/30mm1zZYCas" title="Video perkenalan PG Pesantren Baru" loading="lazy" allowfullscreen></iframe></div>
-    <p class="hint"><a href="https://youtu.be/30mm1zZYCas?si=H_bBny28VA3ARf2b" target="_blank" rel="noopener noreferrer">Tonton di YouTube</a></p>
   </div>
 </section>
 
-<section id="struktur">
+<!-- SOSIAL MEDIA -->
+<section id="sosial-media">
   <div class="wrap">
-    <h2>Struktur Perusahaan</h2>
-    <p class="lead">PG Pesantren Baru dipimpin oleh seorang Administratur yang membawahi enam bagian fungsional: keamanan, quality control, keuangan dan umum, pengolahan, instalasi, serta tanaman. Bagan di bawah menunjukkan garis jabatan dari pimpinan hingga masing-masing bagian.</p>
-    <div class="org" role="region" tabindex="0" aria-label="Bagan struktur organisasi PG Pesantren Baru"><div class="root"><span class="n">Administratur</span><ul class="l2"><li><span class="n">Perwira Keamanan</span></li><li><span class="n">Kepala Quality Control</span><ul class="sub"><li><span class="n">Staf Litbang Tanaman</span></li><li><span class="n">Staf Litbang Pabrik dan Lingkungan</span></li></ul></li><li><span class="n">Kepala Bagian A.K.U</span><ul class="sub"><li><span class="n">Assisten Bagian SDM dan Umum</span><ul class="sub"><li><span class="n">R C Personalia</span></li><li><span class="n">R C Pengadaan bahan/barang dan jasa</span></li><li><span class="n">R C sekretariat dan rumah tangga</span></li></ul></li><li><span class="n">Assisten Bagian Keuangan</span><ul class="sub"><li><span class="n">R C Akuntansi</span></li><li><span class="n">T U Hasil</span></li><li><span class="n">R C Gudang</span></li><li><span class="n">Kepala Kantor Jengkol</span></li></ul></li></ul></li><li><span class="n">Kepala Bagian Pengolahan</span><ul class="sub"><li><span class="n">Wakil Kepala Bag. Pengolahan</span><ul class="sub"><li><span class="n">Kemiker I Pemurnian</span></li><li><span class="n">Kemiker II Penguapan</span></li><li><span class="n">Kemiker III Masakan</span></li><li><span class="n">Kemiker IV Puteran</span></li></ul></li></ul></li><li><span class="n">Kepala Bagian Instalasi</span><ul class="sub"><li><span class="n">Wakil Kepala Bag. Instalasi</span><ul class="sub"><li><span class="n">Masinis Gilingan</span></li><li><span class="n">Masinis Ketel</span></li><li><span class="n">Masinis Listrik dan Instrumen</span></li><li><span class="n">Masinis Besali/Garasi</span></li></ul></li></ul></li><li><span class="n">Kepala Bagian Tanaman</span><ul class="sub"><li><span class="n">SKK TS HGU</span><ul class="sub"><li><span class="n">SK I TS</span></li><li><span class="n">SK II TS</span></li><li><span class="n">Sinder Mekanisasi</span></li></ul></li><li><span class="n">SKK TR</span><ul class="sub"><li><span class="n">SK II TR</span></li><li><span class="n">SK III TR</span></li></ul></li><li><span class="n">SKK TA</span><ul class="sub"><li><span class="n">Sinder Caneyard</span></li></ul></li></ul></li></ul></div></div>
-    <p class="hint">Pada layar sempit, geser bagan ke samping bila perlu.</p>
-  </div>
-</section>
+    <div class="section-head center">
+      <div class="clay-badge">📲 Kanal Komunikasi Resmi</div>
+      <h2>Sosial Media</h2>
+      <p class="lead">Ikuti akun resmi kami untuk mendapatkan informasi terkini, agenda giling tebu, dan kegiatan pabrik.</p>
+    </div>
 
-<section id="lokasi" style="padding-top:0">
-  <div class="wrap">
-    <h2>Lokasi Perusahaan</h2>
-    <p class="lead">PG Pesantren Baru berada di Kediri, Jawa Timur. Buka peta di bawah untuk melihat posisi pabrik dan mendapatkan rute dari lokasi Anda.</p>
-    <iframe class="map" title="Peta lokasi PG Pesantren Baru" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=PG+Pesantren+Baru+Kediri&output=embed"></iframe>
-    <div class="btns"><a class="btn btn-p" href="https://maps.app.goo.gl/5reTrpXEPBcyXHJV9" target="_blank" rel="noopener noreferrer">Buka di Google Maps</a></div>
-  </div>
-</section>
-
-<section id="sosial-media" class="muted">
-  <div class="wrap">
-    <h2>Sosial Media</h2>
-    <p class="lead">Ikuti akun resmi kami untuk kegiatan dan informasi terbaru dari pabrik.</p>
-    <div class="card pad social">
-      <div><div class="handle">@pg.pesantrenbaru</div><p>Instagram. Tempat mengikuti kegiatan dan informasi terbaru PG Pesantren Baru.</p></div>
-      <a class="btn btn-p" href="https://www.instagram.com/pg.pesantrenbaru/?hl=en" target="_blank" rel="noopener noreferrer">Kunjungi Instagram</a>
+    <div class="clay-card social-card">
+      <div class="social-meta">
+        <div class="social-icon-box">📷</div>
+        <div>
+          <div class="handle">@pg.pesantrenbaru</div>
+          <p>Instagram resmi PG Pesantren Baru. Dokumentasi kegiatan giling, berita, dan info kemitraan.</p>
+        </div>
+      </div>
+      <a class="btn btn-p" href="https://www.instagram.com/pg.pesantrenbaru/?hl=en" target="_blank" rel="noopener noreferrer">Kunjungi Instagram ↗</a>
     </div>
   </div>
 </section>
 
-<section id="produk" class="dark">
+<!-- PRODUK YANG DIHASILKAN (DARK CLAY) -->
+<section id="produk" class="section-dark">
   <div class="wrap">
-    <h2>Produk yang Dihasilkan</h2>
+    <div class="section-head center">
+      <div class="clay-badge amber">🌾 Hasil Produksi Pengolahan</div>
+      <h2>Produk yang Dihasilkan</h2>
+      <p class="lead">Dari tebu pilihan berkualitas tinggi, PG Pesantren Baru memproses bahan baku menjadi komoditas utama dan produk sampingan bernilai guna industri tinggi.</p>
+    </div>
+
     <div class="grid3">
-      <article class="card">
-        <div class="ph" role="img" aria-label="Gula Kristal Putih">Nanti ada gambar Gula Kristal Putih</div>
-        <div class="pad"><span class="tag">Produk utama</span><h3>Gula Kristal Putih</h3><p>Merupakan produk andalan kami yang diproses dari bahan baku tebu pilihan berkualitas tinggi. Gula Kristal Putih ini diproduksi melalui serangkaian tahapan ekstraksi dan kristalisasi berstandar mutu ketat untuk memastikan tingkat kemanisan, kebersihan, dan kualitas visual yang optimal guna memenuhi kebutuhan pokok konsumsi masyarakat luas.</p></div>
+      <!-- Gula Kristal Putih -->
+      <article class="clay-card product-card">
+        <div class="product-img-wrap">
+          <img class="product-img" src="https://asset.kompas.com/crops/emaEbFqTwJdDV_K3sekzRRRRnQs=/150x100:1350x900/1200x800/data/photo/2022/10/13/634826ae72224.jpg" alt="Gula Kristal Putih" loading="lazy">
+        </div>
+        <div class="pad">
+          <span class="product-tag primary">Produk Utama</span>
+          <h3>Gula Kristal Putih</h3>
+          <p>Produk andalan kami yang diproses dari tebu pilihan berkualitas tinggi melalui ekstraksi dan kristalisasi berstandar mutu ketat. Memiliki tingkat kemanisan dan kemurnian optimal yang memenuhi Standar Nasional Indonesia (SNI) guna memenuhi kebutuhan konsumsi masyarakat luas.</p>
+        </div>
       </article>
-      <article class="card">
-        <div class="ph" role="img" aria-label="Tetes Tebu">Nanti ada gambar Tetes Tebu</div>
-        <div class="pad"><span class="tag">Produk sampingan</span><h3>Tetes Tebu</h3><p>Sebagai wujud efisiensi dan optimalisasi proses produksi, kami juga menghasilkan tetes tebu (molase) bernilai guna tinggi. Produk sampingan berupa cairan kental sisa kristalisasi gula ini sangat diminati sebagai bahan baku penting oleh berbagai sektor industri lanjutan, seperti industri pakan ternak, fermentasi, hingga pembuatan etanol dan penyedap rasa.</p></div>
+
+      <!-- Tetes Tebu -->
+      <article class="clay-card product-card">
+        <div class="product-img-wrap">
+          <img class="product-img" src="https://bibitbunga.com/wp-content/uploads/2018/05/Tetes-Tebu-Molase-500-ml.jpg" alt="Tetes Tebu (Molase)" loading="lazy">
+        </div>
+        <div class="pad">
+          <span class="product-tag secondary">Produk Sampingan</span>
+          <h3>Tetes Tebu (Molase)</h3>
+          <p>Cairan kental bernilai guna tinggi sisa proses kristalisasi gula. Sangat diminati sebagai bahan baku penting oleh berbagai sektor industri turunan, seperti industri fermentasi, pakan ternak, pembuatan bioetanol, hingga bahan penyedap rasa makanan.</p>
+        </div>
       </article>
-      <article class="card">
-        <div class="ph" role="img" aria-label="Ampas Tebu">Nanti ada gambar Ampas Tebu</div>
-        <div class="pad"><span class="tag">Produk sampingan</span><h3>Ampas Tebu</h3><p>Ampas tebu atau bagasse merupakan hasil sampingan dari proses ekstraksi atau penggilingan batang tebu yang kaya akan kandungan serat biomassa. Produk ini kami kelola dengan baik karena bernilai ekonomis dan ramah lingkungan, yang dapat dimanfaatkan lebih lanjut sebagai bahan bakar boiler industri, bahan baku pembuatan kertas, maupun campuran pakan ternak.</p></div>
+
+      <!-- Ampas Tebu -->
+      <article class="clay-card product-card">
+        <div class="product-img-wrap">
+          <img class="product-img" src="https://pgtrangkil.com/web/image/1046-59efc144/IMG_1018.webp" alt="Ampas Tebu (Bagasse)" loading="lazy">
+        </div>
+        <div class="pad">
+          <span class="product-tag secondary">Produk Sampingan</span>
+          <h3>Ampas Tebu (Bagasse)</h3>
+          <p>Hasil sampingan berupa serat biomassa kaya lignin dan selulosa dari penggilingan batang tebu. Dikelola secara ramah lingkungan untuk bahan bakar boiler energi mandiri pabrik, bahan baku industri kertas, serta campuran pakan ternak berkualitas.</p>
+        </div>
       </article>
     </div>
   </div>
 </section>
 
-<section id="kontak" class="dark" style="border-top:1px solid #3a4150">
+<!-- KONTAK PERUSAHAAN (DARK CLAY) -->
+<section id="kontak" class="section-dark">
   <div class="wrap">
-    <h2>Hubungi Perusahaan</h2>
-    <p class="lead">Kirim pertanyaan atau pesan Anda lewat email. Formulir ini membuka aplikasi email Anda dengan isi pesan yang sudah terisi.</p>
-    <form class="form card pad" id="form-kontak" novalidate>
-      <label for="nama" style="margin-top:0">Nama</label>
-      <input id="nama" name="nama" autocomplete="name" aria-describedby="err-nama"><div class="err" id="err-nama" aria-live="polite"></div>
-      <label for="email">Email Anda</label>
-      <input id="email" name="email" type="email" autocomplete="email" aria-describedby="err-email"><div class="err" id="err-email" aria-live="polite"></div>
-      <label for="subjek">Subjek</label>
-      <input id="subjek" name="subjek" aria-describedby="err-subjek"><div class="err" id="err-subjek" aria-live="polite"></div>
-      <label for="pesan">Pesan</label>
-      <textarea id="pesan" name="pesan" rows="5" maxlength="1000" aria-describedby="err-pesan"></textarea><div class="err" id="err-pesan" aria-live="polite"></div>
-      <button class="btn btn-p" type="submit" style="margin-top:12px">Kirim Email</button>
-      <div class="ok" id="status" role="status" aria-live="polite"></div>
-    </form>
+    <div class="section-head center">
+      <div class="clay-badge">✉️ Layanan Komunikasi</div>
+      <h2>Hubungi Perusahaan</h2>
+      <p class="lead">Kirim pertanyaan, kerja sama kemitraan, atau pesan Anda lewat email. Formulir ini akan membuka aplikasi email Anda dengan format pesan yang rapi.</p>
+    </div>
+
+    <div class="clay-card contact-container">
+      <form class="form" id="form-kontak" novalidate>
+        <label for="nama" style="margin-top:0">Nama Lengkap</label>
+        <input id="nama" name="nama" autocomplete="name" placeholder="Masukkan nama Anda" aria-describedby="err-nama">
+        <div class="err" id="err-nama" aria-live="polite"></div>
+
+        <label for="email">Alamat Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" placeholder="nama@domain.com" aria-describedby="err-email">
+        <div class="err" id="err-email" aria-live="polite"></div>
+
+        <label for="subjek">Subjek Pesan</label>
+        <input id="subjek" name="subjek" placeholder="Topik atau perihal pesan Anda" aria-describedby="err-subjek">
+        <div class="err" id="err-subjek" aria-live="polite"></div>
+
+        <label for="pesan">Isi Pesan</label>
+        <textarea id="pesan" name="pesan" rows="5" maxlength="1000" placeholder="Tuliskan pesan atau pertanyaan Anda di sini..." aria-describedby="err-pesan"></textarea>
+        <div class="err" id="err-pesan" aria-live="polite"></div>
+
+        <button class="btn btn-p" type="submit" style="width:100%;margin-top:16px">Kirim Pesan Email</button>
+        <div class="ok" id="status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
   </div>
 </section>
 </main>
-<footer class="ftr dark">
+
+<!-- FOOTER -->
+<footer class="ftr">
   <div class="wrap">
-    <div><strong>PG Pesantren Baru</strong><br>Kediri, Jawa Timur</div>
-    <ul><li><a href="#tentang">Tentang</a></li><li><a href="#struktur">Struktur</a></li><li><a href="#lokasi">Lokasi</a></li><li><a href="#produk">Produk</a></li><li><a href="#kontak">Kontak</a></li></ul>
-    <a href="https://www.instagram.com/pg.pesantrenbaru/?hl=en" target="_blank" rel="noopener noreferrer">Instagram @pg.pesantrenbaru</a>
+    <div class="ftr-wrap">
+      <div class="ftr-brand">
+        <div class="ftr-logo">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAMkxbDVNk4uGkwsiwxkGxDW5r7ZrGfD5YgAmjEfPwcBFhFr_WCwWhdvg&s=10" alt="Logo PG Pesantren Baru">
+        </div>
+        <div>
+          <strong style="font-size:17px;font-family:'Host Grotesk',sans-serif">PG Pesantren Baru</strong>
+          <div style="font-size:13px;opacity:0.8">Kediri, Jawa Timur • PT Sinergi Gula Nusantara</div>
+        </div>
+      </div>
+
+      <ul>
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#struktur">Struktur</a></li>
+        <li><a href="#lokasi">Lokasi</a></li>
+        <li><a href="#produk">Produk</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+
+      <div>
+        <a class="btn btn-s" href="https://www.instagram.com/pg.pesantrenbaru/?hl=en" target="_blank" rel="noopener noreferrer" style="font-size:13px;padding:9px 18px">
+          📷 Instagram Resmi
+        </a>
+      </div>
+    </div>
   </div>
 </footer>
+
 <script src="assets/js/main.js"></script>
 </body>
 </html>
