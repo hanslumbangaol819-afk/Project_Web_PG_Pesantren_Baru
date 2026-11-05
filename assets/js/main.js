@@ -15,10 +15,9 @@ nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
 const clean = (s, max) => s.replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, '').trim().slice(0, max);
 const form = document.getElementById('form-kontak');
 const status = document.getElementById('status');
-const btnKirim = form.querySelector('button[type="submit"]');
+const btnMailto = document.getElementById('btn-mailto');
 
-form.addEventListener('submit', async e => {
-  e.preventDefault();
+const validateForm = () => {
   const v = {
     nama: clean(form.nama.value, 100),
     email: clean(form.email.value, 120),
@@ -36,46 +35,45 @@ form.addEventListener('submit', async e => {
     document.getElementById('err-' + k).textContent = errors[k];
     if (errors[k] && !first) first = k;
   }
-  status.textContent = '';
-  status.className = 'ok';
-  if (first) { form[first].focus(); return; }
-
-  const originalBtnText = btnKirim.textContent;
-  btnKirim.disabled = true;
-  btnKirim.textContent = 'Sedang mengirim pesan...';
-
-  try {
-    const formData = new FormData();
-    formData.append('Nama Pengirim', v.nama);
-    formData.append('Email Pengirim', v.email);
-    formData.append('_subject', `[Pesan PG Pesantren Baru] ${v.subjek}`);
-    formData.append('Topik / Subjek', v.subjek);
-    formData.append('Isi Pesan', v.pesan);
-    formData.append('_captcha', 'false');
-    formData.append('_template', 'table');
-
-    const res = await fetch(`https://formsubmit.co/ajax/${CONTACT_EMAIL}`, {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json'
-      },
-      body: formData
-    });
-
-    const data = await res.json();
-    if (res.ok && (data.success === 'true' || data.success === true)) {
-      status.className = 'ok success';
-      status.textContent = 'Pesan Anda berhasil dikirim langsung ke hanslumbangaol819@gmail.com! Terima kasih.';
-      form.reset();
-    } else {
-      throw new Error(data.message || 'Gagal mengirim pesan');
-    }
-  } catch (err) {
-    console.error('Submit error:', err);
-    status.className = 'ok error';
-    status.textContent = 'Terjadi kendala saat mengirim pesan. Pastikan perangkat terhubung ke internet dan coba kembali.';
-  } finally {
-    btnKirim.disabled = false;
-    btnKirim.textContent = originalBtnText;
+  if (first) {
+    form[first].focus();
+    return null;
   }
+  return v;
+};
+
+// Kirim via Gmail Web (Langsung membuka tab Gmail dengan alamat tujuan, subjek, dan draf pesan terisi lengkap)
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const v = validateForm();
+  if (!v) return;
+
+  const subject = `[Pesan PG Pesantren Baru] ${v.subjek}`;
+  const body = `Halo Tim Manajemen PG Pesantren Baru,\n\nNama Pengirim: ${v.nama}\nEmail Pengirim: ${v.email}\nTopik / Subjek: ${v.subjek}\n\nIsi Pesan:\n${v.pesan}\n\n---\nDikirim melalui formulir kontak web PG Pesantren Baru`;
+
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(CONTACT_EMAIL)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+  const win = window.open(gmailUrl, '_blank');
+  if (!win || win.closed || typeof win.closed === 'undefined') {
+    window.location.href = gmailUrl;
+  }
+
+  status.className = 'ok success';
+  status.innerHTML = `<strong>Tab Gmail berhasil dibuka!</strong><br>Pesan dan alamat penerima <u>${CONTACT_EMAIL}</u> sudah terisi otomatis. Silakan klik tombol <strong>Kirim</strong> di tab Gmail Anda.`;
 });
+
+// Opsi alternatif: Kirim via aplikasi email desktop (Outlook / Apple Mail / Mailto)
+if (btnMailto) {
+  btnMailto.addEventListener('click', () => {
+    const v = validateForm();
+    if (!v) return;
+
+    const subject = `[Pesan PG Pesantren Baru] ${v.subjek}`;
+    const body = `Nama Pengirim: ${v.nama}\nEmail Pengirim: ${v.email}\nTopik: ${v.subjek}\n\nIsi Pesan:\n${v.pesan}`;
+
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    status.className = 'ok success';
+    status.innerHTML = `Aplikasi email default Anda dibuka dengan tujuan <u>${CONTACT_EMAIL}</u>. Silakan selesaikan pengiriman dari aplikasi tersebut.`;
+  });
+}
