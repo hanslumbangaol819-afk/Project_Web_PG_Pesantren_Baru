@@ -986,6 +986,25 @@ section {
   font-weight: 600;
   color: #60a5fa;
   text-align: center;
+  font-size: 14.5px;
+  line-height: 1.5;
+  transition: all 0.25s ease;
+}
+
+.ok.success {
+  color: #34d399;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  padding: 14px 18px;
+  border-radius: 14px;
+}
+
+.ok.error {
+  color: #f87171;
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(248, 113, 113, 0.35);
+  padding: 14px 18px;
+  border-radius: 14px;
 }
 
 /* Footer */
