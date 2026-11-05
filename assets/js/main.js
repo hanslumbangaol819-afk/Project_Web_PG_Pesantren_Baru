@@ -1,5 +1,5 @@
-// Ganti dengan alamat email resmi perusahaan sebelum rilis.
-const CONTACT_EMAIL = 'ALAMAT_EMAIL_PERUSAHAAN';
+// Alamat email resmi tujuan formulir kontak
+const CONTACT_EMAIL = 'hanslumbangaol819@gmail.com';
 
 const burger = document.getElementById('burger');
 const nav = document.getElementById('nav');
